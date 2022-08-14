@@ -3,7 +3,7 @@ For login form enter user's name, for example - 'Bret'
 
 # 🛠 Technologies:
 
-- **ReactJS 18**
+- **ReactJS**
 - **TypeScript**
 - **Redux Toolkit**
 - **React Router v6**
