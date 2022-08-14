@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+import {Navigate, Route, Routes} from 'react-router-dom'
 import './App.css';
+import LoginPage from "./pages/LoginPage";
+import MainPage from "./pages/MainPage";
+import Page404 from "./pages/Page404";
+import {useSelector} from "react-redux";
+import {RootState} from "./store";
+import Header from "./components/Header/Header";
 
 function App() {
+    const { isAuth } = useSelector((state: RootState) => state.auth)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+        {isAuth && <Header />}
+        <Routes>
+            <Route path='/' element={isAuth ? <Navigate to='/main' /> : <Navigate to='/login' />}/>
+            <Route path='/login' element={<LoginPage />}/>
+            <Route path='/main' element={<MainPage />}/>
+            <Route path='*' element={<Page404 />}/>
+        </Routes>
     </div>
   );
 }
