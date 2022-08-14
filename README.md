@@ -6,6 +6,7 @@ For login form enter user's name, for example - 'Bret'
 - **ReactJS**
 - **TypeScript**
 - **Redux Toolkit**
+- **Redux AsyncThunk**
 - **React Router v6**
 - **Axios**
 - **React Hooks**
