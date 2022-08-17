@@ -11,3 +11,4 @@ For login form enter user's name, for example - 'Bret'
 - **Axios**
 - **React Hooks**
 - **CSS-Modules / Inline styles**
+- **Local storage**
