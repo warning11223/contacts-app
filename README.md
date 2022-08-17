@@ -10,5 +10,5 @@ For login form enter user's name, for example - 'Bret'
 - **React Router v6**
 - **Axios**
 - **React Hooks**
-- **CSS-Modules / Inline styles**
+- **Ant design**
 - **Local storage**
